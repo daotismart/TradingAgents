@@ -35,6 +35,17 @@ class TestNormalizeSymbol(unittest.TestCase):
         self.assertEqual(normalize_symbol("NAS100"), "^NDX")
         self.assertEqual(normalize_symbol("US30"), "^DJI")
 
+    def test_cffex_index_futures_and_options_aliases(self):
+        self.assertEqual(normalize_symbol("IF"), "510300.SS")
+        self.assertEqual(normalize_symbol("IF0"), "510300.SS")
+        self.assertEqual(normalize_symbol("IH"), "510050.SS")
+        self.assertEqual(normalize_symbol("IC0"), "510500.SS")
+        self.assertEqual(normalize_symbol("IM"), "512100.SS")
+        self.assertEqual(normalize_symbol("IO"), "510300.SS")
+        self.assertEqual(normalize_symbol("HO"), "510050.SS")
+        self.assertEqual(normalize_symbol("MO"), "512100.SS")
+        self.assertEqual(normalize_symbol("hs300"), "510300.SS")
+
     def test_forex_pairs_get_x_suffix(self):
         self.assertEqual(normalize_symbol("EURUSD"), "EURUSD=X")
         self.assertEqual(normalize_symbol("GBPJPY"), "GBPJPY=X")

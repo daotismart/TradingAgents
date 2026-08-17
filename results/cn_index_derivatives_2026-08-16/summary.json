@@ -1,0 +1,146 @@
+{
+  "generated_at": "2026-08-16T15:10:00.958388+08:00",
+  "source": "akshare",
+  "sections": {
+    "contract_info_rows": 836,
+    "index_related_rows": 824
+  },
+  "futures": [
+    {
+      "code": "IF0",
+      "name": "沪深300股指期货主力",
+      "rows": 2324,
+      "last_date": "2026-08-14",
+      "close": 4620.4,
+      "ret20d_pct": 3.2768563637176396,
+      "ann_vol20_pct": 19.340877199737477,
+      "high_20": 4662.4,
+      "low_20": 4508.2
+    },
+    {
+      "code": "IH0",
+      "name": "上证50股指期货主力",
+      "rows": 2324,
+      "last_date": "2026-08-14",
+      "close": 2890.0,
+      "ret20d_pct": 3.3471606351022754,
+      "ann_vol20_pct": 16.275549935070583,
+      "high_20": 2948.8,
+      "low_20": 2852.4
+    },
+    {
+      "code": "IC0",
+      "name": "中证500股指期货主力",
+      "rows": 2324,
+      "last_date": "2026-08-14",
+      "close": 7861.2,
+      "ret20d_pct": 6.390580592773043,
+      "ann_vol20_pct": 34.6741944752044,
+      "high_20": 7914.2,
+      "low_20": 7245.6
+    },
+    {
+      "code": "IM0",
+      "name": "中证1000股指期货主力",
+      "rows": 986,
+      "last_date": "2026-08-14",
+      "close": 7650.2,
+      "ret20d_pct": 8.280020381588638,
+      "ann_vol20_pct": 36.05098138453784,
+      "high_20": 7677.4,
+      "low_20": 6845.2
+    }
+  ],
+  "indices": [
+    {
+      "symbol": "sh000300",
+      "name": "沪深300",
+      "pair_future": "IF",
+      "rows": 5971,
+      "last_date": "2026-08-14",
+      "close": 4665.881,
+      "ret20d_pct": 3.0201618645667727
+    },
+    {
+      "symbol": "sh000016",
+      "name": "上证50",
+      "pair_future": "IH",
+      "rows": 5493,
+      "last_date": "2026-08-14",
+      "close": 2916.128,
+      "ret20d_pct": 3.128263507317519
+    },
+    {
+      "symbol": "sh000905",
+      "name": "中证500",
+      "pair_future": "IC",
+      "rows": 5250,
+      "last_date": "2026-08-14",
+      "close": 7990.328,
+      "ret20d_pct": 6.342560977768397
+    },
+    {
+      "symbol": "sh000852",
+      "name": "中证1000",
+      "pair_future": "IM",
+      "rows": 2877,
+      "last_date": "2026-08-14",
+      "close": 7769.82,
+      "ret20d_pct": 8.39598682811764
+    }
+  ],
+  "options": {
+    "IO_HS300": {
+      "label": "IO_HS300",
+      "list_type": "dict",
+      "months": [
+        "沪深300指数"
+      ],
+      "month_沪深300指数_type": "<class 'list'>",
+      "spot_rows": 33
+    },
+    "HO_SZ50": {
+      "label": "HO_SZ50",
+      "list_type": "dict",
+      "months": [
+        "上证50指数"
+      ],
+      "month_上证50指数_type": "<class 'list'>",
+      "spot_rows": 21
+    },
+    "MO_ZZ1000": {
+      "label": "MO_ZZ1000",
+      "list_type": "dict",
+      "months": [
+        "中证1000指数"
+      ],
+      "month_中证1000指数_type": "<class 'list'>",
+      "spot_rows": 20
+    }
+  },
+  "qvix": {
+    "hs300_index_qvix": {
+      "error": "IncompleteRead(357427 bytes read, 537606 more expected)"
+    },
+    "sz50_index_qvix": {
+      "last_date": "2026-08-14",
+      "value": NaN,
+      "rows": 2790
+    },
+    "zz1000_index_qvix": {
+      "last_date": "2026-08-14",
+      "value": NaN,
+      "rows": 2790
+    },
+    "etf50_qvix": {
+      "last_date": "2026-08-14",
+      "value": 16.85,
+      "rows": 2790
+    },
+    "etf300_qvix": {
+      "last_date": "2026-08-14",
+      "value": 18.6,
+      "rows": 2790
+    }
+  }
+}

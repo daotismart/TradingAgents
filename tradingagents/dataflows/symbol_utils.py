@@ -48,8 +48,10 @@ _CRYPTO_BASES = frozenset(
 
 # Explicit aliases for instruments whose broker symbol does not map to a
 # Yahoo symbol by rule. Metals/energy resolve to their front-month future;
-# index CFD names resolve to the underlying Yahoo index symbol. Extend by
-# adding rows — no call site changes required.
+# index CFD names resolve to the underlying Yahoo index symbol; CFFEX
+# A-share index futures/options resolve to liquid Shanghai ETF proxies
+# (Yahoo does not list IF/IH/IC/IM or IO/HO/MO). Extend by adding rows —
+# no call site changes required.
 _ALIASES = {
     # Precious metals (spot names -> COMEX/NYMEX futures)
     "XAUUSD": "GC=F", "XAU": "GC=F", "GOLD": "GC=F",
@@ -67,6 +69,14 @@ _ALIASES = {
     "GER40": "^GDAXI", "GER30": "^GDAXI", "DE40": "^GDAXI",
     "UK100": "^FTSE", "JP225": "^N225", "JPN225": "^N225",
     "FRA40": "^FCHI", "EU50": "^STOXX50E", "HK50": "^HSI",
+    # CFFEX A-share index futures / options -> liquid Shanghai ETF proxies.
+    # Yahoo does not list IF/IH/IC/IM futures or IO/HO/MO options chains, so
+    # agent OHLCV/news paths price the corresponding ETF underlyings instead.
+    "IF": "510300.SS", "IF0": "510300.SS", "HS300": "510300.SS",
+    "IH": "510050.SS", "IH0": "510050.SS", "SZ50": "510050.SS",
+    "IC": "510500.SS", "IC0": "510500.SS", "ZZ500": "510500.SS",
+    "IM": "512100.SS", "IM0": "512100.SS", "ZZ1000": "512100.SS",
+    "IO": "510300.SS", "HO": "510050.SS", "MO": "512100.SS",
 }
 
 # Yahoo symbols may contain letters, digits, and these structural characters.
